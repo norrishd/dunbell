@@ -1,0 +1,9 @@
+person_id,fact_type,fact_subtype,fact_ref,fact_deets,fact_importance
+1,family,sister,,"Jolene, younger, good relationship",2
+1,friendship,,2,Friends since high school,3
+2,interest,hobby,,Macrame,1
+2,interest,hobby,,Origami,1
+2,employment,part-time,,Horse wrangler,5
+2,education,undergrad,,"BSc at University of Melbourne, 2016",2
+3,employment,full-time,,"Fine artist",4
+3,volunteering,casual,,"Washes dirty dogs"

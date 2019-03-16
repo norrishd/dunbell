@@ -2,6 +2,7 @@
 Main app launching point
 """
 import dash
+from dash.dependencies import Input, Output
 import dash_core_components as dcc
 import dash_html_components as html
 
@@ -21,26 +22,22 @@ app.layout = html.Div(children=[
     }, children="Keep track of interesting acquaintances and common interests"),
 
     html.Label('Acquaintance'),
-    dcc.Dropdown(
-        options=[
+    dcc.Dropdown(id='friend-selector', options=[
             {'label': df['display_name'], 'value': df['id']}
             for i, df in read_friend_deets().iterrows()]
     ),
 
-    generate_table(lookup_facts(1))
-
-    # dcc.Graph(
-    #     id='example-graph',
-    #     figure={
-    #         'data': [
-    #             {'x': [1, 2, 3], 'y': [4, 1, 2], 'type': 'bar', 'name': 'Groovy'},
-    #             {'x': [1, 2, 3], 'y': [2, 4, 5], 'type': 'bar', 'name': 'Grand'},
-    #         ],
-    #         'layout': {
-    #         }
-    #     }
-    # )
+    html.Div(id='fact-table')
 ])
+
+
+@app.callback(
+    Output(component_id='fact-table', component_property='children'),
+    [Input(component_id='friend-selector', component_property='value')]
+)
+def update_fact_table(friend_id):
+    df = lookup_facts(friend_id)
+    return generate_table(df)
 
 if __name__ == '__main__':
     app.run_server(debug=True)
