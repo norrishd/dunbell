@@ -2,6 +2,7 @@
 from pathlib import Path
 
 import dash_html_components as html
+import numpy as np
 import pandas as pd
 
 
@@ -34,3 +35,10 @@ def generate_table(dataframe, max_rows=10):
             html.Td(dataframe.iloc[i][col]) for col in dataframe.columns
         ]) for i in range(min(len(dataframe), max_rows))]
     )
+
+def add_person(name):
+    """Add a person to the file"""
+    if name is not None and name != "":
+        with open(str(DATA_PATH / FRIEND_FILE), 'a') as fhand:
+            line = f"\n{np.random.randint(1000)},{name},{name},"
+            fhand.write(line)

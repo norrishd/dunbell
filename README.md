@@ -1,21 +1,40 @@
-# Friend Tracker
+# Dunbell: A dumbbell for your Dunbar's number
+Dunbell's number is a claim that the average human can only keep track of a
+limited number of social relationships - somewhere in the order of 150.
 
-## Functions
+Most of us will have met far more interesting and valuable people than this
+number: folks you meet travelling, friends of friends, cool distant relations.
+Social media platforms are designed for superficial widely broadcast posts, not
+meaningful one-on-one interactions. Dunbell aims to help fill this gap:
+
+- Remember the name of your old primary school friend's mum
+- Keep track of who it was that gave you great advise about permaculture that
+  one time
+- Discover acquaintances with similar interests who you could put in touch
+
+
+## TODOs
 - Security for login
 - Ability to search for friend by name/nicname
-- Page shows friend facts
-- More important/useful facts rise to the top
-- Facts can have categories associated with them, E.g.
-  - family
-  - hobbies
-  - study
 - Ability to add a friend through interface
+- Ability to add fact
+- Ability to search by fact
+- Ability to bump fact up in importance
+- Default importances for fact types
 - Show friendship graph with edge types
   - friendship
   - family
   - relationship
 - Friends have categories, e.g. "Festivals", "EA"
 - Integrations with emails/Telegram etc?
+
+## Implemented
+- Page shows friend facts
+- More important/useful facts rise to the top
+- Facts can have categories associated with them, E.g.
+  - family
+  - hobbies
+  - study
 
 ## Infrastructure
 - Hosted on AWS
