@@ -1,0 +1,6 @@
+*/data
+__pycache__
+
+# Hidden files
+.vscode
+.python-version

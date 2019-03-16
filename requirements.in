@@ -1,0 +1,13 @@
+cufflinks
+dash
+dash-html-components
+dash-core-components
+dash-table
+dash-daq
+ipdb
+ipython
+jupyterlab
+numpy
+pandas
+pylint
+
